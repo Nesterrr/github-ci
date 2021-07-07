@@ -42,6 +42,8 @@ jobs:
       # Активируем NVM
       - name: Activate NVM
         run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use
+      - name: NVM use
+        run nvm use 14.17.0
       # Устанавливаем нужную версию Node.js 14.17.0
       - name: Install node.js
         # Мы ставим нужную версию в переменную окружения,
