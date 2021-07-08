@@ -1,6 +1,7 @@
-const express = require('express')
+import express from `express`;
+import axios from `axios`;
+
 const app = express()
-const axios = require('axios')
 
 const port = 3000
 const FOREING_API_URL = 'https://jsonplaceholder.typicode.com/';
