@@ -37,7 +37,7 @@ jobs:
         # которую NVM будет использовать
         env:
           NODE_VERSION: 12.18.2
-        run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use && nvm install env.NODE_VERSION
+        run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use && nvm install ${NODE_VERSION}
       # Установка зависимостей проекта
       - name: Install dependencies
         run: npm install
