@@ -43,4 +43,4 @@ jobs:
         run: npm install
       # Запуск ESLint
       - name: Lint source code with ESLint
-        run: npm run lint
+        run: npm run eslint
