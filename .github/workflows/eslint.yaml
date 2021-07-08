@@ -37,10 +37,10 @@ jobs:
         # которую NVM будет использовать
         env:
           NODE_VERSION: 14.17.0
-        run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use && nvm install 14.17.0
+        run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use && nvm install
       # Установка зависимостей проекта
       - name: Install dependencies
         run: npm install
       # Запуск ESLint
       - name: Lint source code with ESLint
-        run: npm run eslint
+        run: npm run lint
