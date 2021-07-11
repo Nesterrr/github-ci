@@ -10,6 +10,17 @@ jobs:
       image: node:14.17.0-alpine
     steps:
       - uses: actions/checkout@v2
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        env: 
+          cache-name: npm-${{ hashFiles('package-lock.json') }}
+        with:
+          # что кешировать (путь)
+          path: ~/.npm
+          # ключ кеширования (хеш)
+          key: ${{ env.cache-name }}
+          # ключ для восстановления кеша
+          restore-keys: ${{ env.cache-name }}
       - name: Install dependencies
         run: npm install
       - name: Lint source code with ESLint
